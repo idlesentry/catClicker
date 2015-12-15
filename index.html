@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-control" content="public">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  
+  <body>
+    <div class = 'row'>
+      <div class = 'col-md-6'>
+        <p id = 'name0'><p>
+      </div>
+      <div class = 'col-md-6'>
+        <p id = 'name1'><p>
+      </div>
+    </div>
+    <div class = 'row'>
+      <div class = 'col-md-6'>
+        <img id = 'cat1' height = '400px' src = 'img/cat.jpg'>
+      </div>
+      <div class = 'col-md-6'>
+        <img id = 'cat2' height = '400px' src = 'img/cat2.jpg'>
+      </div>
+    </div>
+    <div class = 'row'>
+      <div class = 'col-md-6'>
+        <p id = 'display'> Clicks: 0</p>
+      </div>
+      <div class = 'col-md-6'>
+        <p id = 'display2'> Clicks: 0</p>
+      </div>
+    </div>
+
+    <script>
+      var click1 = 0;
+      var click2 = 0;
+      var elem = document.getElementById('cat1');
+      elem.addEventListener('click', function(){
+        click1 += 1;
+        document.getElementById('display').innerHTML = 'Clicks: ' + click1;
+      }, false);
+
+      var elem = document.getElementById('cat2');
+      elem.addEventListener('click', function(){
+        click2 += 1;
+        document.getElementById('display2').innerHTML = 'Clicks: ' + click2;
+      }, false);
+
+      function displayName(){
+        var name = ['Catface', 'Meowmers'];
+        for (i = 0; i < name.length; i++) {
+          document.getElementById('name' + i).innerHTML = name[i];
+        } 
+      }
+      displayName();
+    </script>
+  </body>
+</html>
+
+
+
+
+
