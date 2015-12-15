@@ -10,6 +10,9 @@
   
   <body>
     <div class = 'row'>
+      <div class = 'col-md-11'> <p id = 'list'>Cats: </p><div>
+    </div>
+    <div class = 'row'>
       <div class = 'col-md-6'>
         <p id = 'name0'><p>
       </div>
@@ -50,10 +53,8 @@
       }, false);
 
       function displayName(){
-        var name = ['Catface', 'Meowmers'];
-        for (i = 0; i < name.length; i++) {
-          document.getElementById('name' + i).innerHTML = name[i];
-        } 
+        var name = ['Catface', 'Meowmers', 'Snarf', 'Boots', 'Tabitha'];
+          document.getElementById('list').innerHTML = name;
       }
       displayName();
     </script>
